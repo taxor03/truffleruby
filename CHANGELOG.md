@@ -41,6 +41,7 @@ Bug fixes:
 * Fix several `IO` methods, `File.new` and `ARGF.lineno=` to convert Integer arguments with `#to_int` (#4589, @taxor03).
 * Fix `File.lstat` raising `TypeError` instead of `Errno::ENOENT` for a missing file given as a `Pathname` (#4591, @taxor03).
 * Fix `rb_hash_foreach()` to iterate the entries directly instead of calling `Hash#each` and `Hash#delete`, which might be overridden (#4586, @eregon).
+* Fix several `Socket` methods to convert their arguments with `#to_str`, `#to_int` and `#to_ary` like CRuby (#4606, @taxor03).
 
 Compatibility:
 
